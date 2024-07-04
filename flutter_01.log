@@ -1,0 +1,89 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter debug_adapter
+
+## exception
+
+SocketException: SocketException: Write failed (OS Error: The pipe is being closed.
+, errno = 232), port = 0
+
+```
+#0      _NativeSocket.write (dart:io-patch/socket_patch.dart:1246:34)
+#1      _RawSocket.write (dart:io-patch/socket_patch.dart:2004:15)
+#2      _Socket._write (dart:io-patch/socket_patch.dart:2481:18)
+#3      _SocketStreamConsumer.write (dart:io-patch/socket_patch.dart:2216:28)
+#4      _SocketStreamConsumer.addStream.<anonymous closure> (dart:io-patch/socket_patch.dart:2168:11)
+#5      _rootRunUnary (dart:async/zone.dart:1407:47)
+#6      _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#7      _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#8      _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#9      _DelayedData.perform (dart:async/stream_impl.dart:541:14)
+#10     _PendingEvents.handleNext (dart:async/stream_impl.dart:646:11)
+#11     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:617:7)
+#12     _rootRun (dart:async/zone.dart:1391:47)
+#13     _CustomZone.run (dart:async/zone.dart:1301:19)
+#14     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#15     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#16     _rootRun (dart:async/zone.dart:1399:13)
+#17     _CustomZone.run (dart:async/zone.dart:1301:19)
+#18     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#19     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#20     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
+#21     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+#22     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#23     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:185:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.22.2, on Microsoft Windows [Version 10.0.22631.3737], locale id-ID)
+    • Flutter version 3.22.2 on channel stable at C:\Mobile Programming\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 761747bfc5 (4 weeks ago), 2024-06-05 22:15:13 +0200
+    • Engine revision edd8546116
+    • Dart version 3.4.3
+    • DevTools version 2.34.3
+
+[✓] Windows Version (Installed version of Windows is version 10 or higher)
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+    • Android SDK at C:\Users\USER\AppData\Local\Android\sdk
+    • Platform android-34, build-tools 34.0.0
+    • Java binary at: C:\Program Files\Android\Android Studio\jbr\bin\java
+    • Java version OpenJDK Runtime Environment (build 17.0.9+0--11185874)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✓] Visual Studio - develop Windows apps (Visual Studio Build Tools 2019 16.11.32)
+    • Visual Studio at C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools
+    • Visual Studio Build Tools 2019 version 16.11.34301.259
+    • Windows 10 SDK version 10.0.19041.0
+
+[✓] Android Studio (version 2023.2)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 17.0.9+0--11185874)
+
+[✓] VS Code (version 1.91.0)
+    • VS Code at C:\Users\USER\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.92.0
+
+[✓] Connected device (3 available)
+    • Windows (desktop) • windows • windows-x64    • Microsoft Windows [Version 10.0.22631.3737]
+    • Chrome (web)      • chrome  • web-javascript • Google Chrome 126.0.6478.127
+    • Edge (web)        • edge    • web-javascript • Microsoft Edge 126.0.2592.81
+
+[✓] Network resources
+    • All expected network resources are available.
+
+• No issues found!
+```
